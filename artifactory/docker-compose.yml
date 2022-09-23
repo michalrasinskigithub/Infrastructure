@@ -1,0 +1,10 @@
+version: '2.4'
+services:
+  artifactory:
+    container_name: artifactory
+    image: docker.bintray.io/jfrog/artifactory-jcr:latest
+    ports:
+    - "8081:8081"
+    - "8082:8082"
+    volumes:
+      - "./:/artifactory_extra_conf"
