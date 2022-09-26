@@ -2,9 +2,9 @@ jenkins:
   securityRealm:
     local:
       users:
-      - id: "panda"
-        password: "panda"
-  authorizationStragegy:
+        - id: "panda"
+          password: "panda"
+  authorizationStrategy:
     globalMatrix:
       permissions:
         - "Overall/Administer:panda"

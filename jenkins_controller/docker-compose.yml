@@ -10,4 +10,4 @@ services:
       - "50000:50000"
     volumes:
       - /home/panda/jenkins:/var/jenkins_home
-      - /home/panda/
+      - ./casc.yml:/usr/share/jenkins/ref/casc.yml
