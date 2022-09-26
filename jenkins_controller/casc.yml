@@ -1,0 +1,11 @@
+jenkins:
+  securityRealm:
+    local:
+      users:
+      - id: "panda"
+        password: "panda"
+  authorizationStragegy:
+    globalMatrix:
+      permissions:
+        - "Overall/Administer:panda"
+  numExecutors: 0
