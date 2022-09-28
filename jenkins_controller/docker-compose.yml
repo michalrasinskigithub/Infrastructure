@@ -4,10 +4,13 @@ services:
   jenkins:
     build: 
       context: .
+      dockerfile: ./Dockerfile
     container_name: jenkins-local
     ports:
       - "8880:8080"
       - "50000:50000"
     volumes:
-      - /home/panda/jenkins:/var/jenkins_home
+      - jenkins:/var/jenkins_home
       - ./casc.yml:/usr/share/jenkins/ref/casc.yml
+volumes:
+  jenkins:
