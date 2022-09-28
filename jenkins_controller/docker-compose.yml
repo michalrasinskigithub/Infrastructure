@@ -1,4 +1,4 @@
-version: '3.4'
+version: '3.9'
 
 services:
   jenkins:
@@ -10,7 +10,7 @@ services:
       - "8880:8080"
       - "50000:50000"
     volumes:
-      - jenkins:/var/jenkins_home
-      - ./casc.yml:/usr/share/jenkins/ref/casc.yml
+      - "home-panda-jenkins:/var/jenkins_home"
+      - "./casc.yml:/usr/share/jenkins/ref/casc.yml"
 volumes:
-  jenkins:
+  home-panda-jenkins:
