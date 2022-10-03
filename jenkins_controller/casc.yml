@@ -9,6 +9,18 @@ jenkins:
       permissions:
         - "Overall/Administer:panda"
   numExecutors: 0
+  nodes:
+  - permanent:
+      labelString: "agent"
+      launcher:
+        ssh:
+          credentialsId: "jenkins_agent"
+          host: "jenkins_agent"
+          port: 2222
+          sshHostKeyVerificationStrategy: "nonVerifyingKeyVerificationStrategy"
+      name: "agent"
+      remoteFS: "/home/jenkins/agent"
+      retentionStrategy: "always"
 tool:
   sonarRunnerInstallation:
     installations:
@@ -18,6 +30,7 @@ tool:
           installers:
           - sonarRunnerInstaller:
               id: "4.7.0.2747"
+
 unclassified:
   sonarGlobalConfiguration:
     buildWrapperEnabled: true
@@ -30,3 +43,6 @@ unclassified:
   locale:
     ignoreAcceptLanguage: true
     systemLocale: "EN"
+  location:
+    url: "http://192.168.44.44:8880/"
+    adminAddress: admin@my-corp.pl
