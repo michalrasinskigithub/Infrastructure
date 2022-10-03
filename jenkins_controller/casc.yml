@@ -27,3 +27,6 @@ unclassified:
       triggers:
         skipScmCause: false
         skipUpstreamCause: false
+  locale:
+    ignoreAcceptLanguage: true
+    systemLocale: "EN"
